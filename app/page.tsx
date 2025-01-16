@@ -39,9 +39,11 @@ export default async function Home() {
         </div>
 
         <footer>
-          {consent?.value === "accepted" ? (
+          {consent?.value === "accepted" && (
             <p className="text-green-500"> Thanks for accepting cookies!</p>
-          ) : (
+          )}
+
+          {consent?.value === "rejected" && (
             <p className="text-red-500">
               You have rejected cookies some functionalities might malfunction!
             </p>
